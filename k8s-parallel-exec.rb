@@ -25,8 +25,19 @@ class K8sParallelExec < Formula
   end
 
   def install
-    chmod 0755, "k8s-parallel-exec"
-    bin.install "k8s-parallel-exec"
+    if OS.mac?
+      if Hardware::CPU.arm?
+        bin.install "k8s-parallel-exec-darwin-arm64" => "k8s-parallel-exec"
+      else
+        bin.install "k8s-parallel-exec-darwin-amd64" => "k8s-parallel-exec"
+      end
+    elsif OS.linux?
+      if Hardware::CPU.arm?
+        bin.install "k8s-parallel-exec-linux-arm64" => "k8s-parallel-exec"
+      else
+        bin.install "k8s-parallel-exec-linux-amd64" => "k8s-parallel-exec"
+      end
+    end
   end
 
   test do
