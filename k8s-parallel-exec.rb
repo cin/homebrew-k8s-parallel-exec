@@ -1,24 +1,24 @@
 class K8sParallelExec < Formula
   desc "Execute commands on Kubernetes pods in parallel"
   homepage "https://github.com/cin/k8s-parallel-exec"
-  version "0.0.9"
+  version "0.0.10"
   license "mit"
 
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/cin/k8s-parallel-exec/releases/download/#{version}/k8s-parallel-exec-darwin-arm64.tgz"
-      sha256 "ab7b812bc0bdadc51030e5194bbf8cd94d68ce3ae27767eb345bf4f593e52e65"
+      sha256 "44c562a94d016d1c76c78ea59b0840f3387ee3e2ffda00ed25e325f8ddc4559c"
     else
       url "https://github.com/cin/k8s-parallel-exec/releases/download/#{version}/k8s-parallel-exec-darwin-amd64.tgz"
-      sha256 "16c91d926e1246d9f53e755f3d4001f798d3b42c6f0b59a90e50ec56827909bb"
+      sha256 "b781cc52417b85f8b7425863febae094444d63403a4948aa4c35d974be50babe"
     end
   elsif OS.linux?
     if Hardware::CPU.arm?
       url "https://github.com/cin/k8s-parallel-exec/releases/download/#{version}/k8s-parallel-exec-linux-arm64.tgz"
-      sha256 "58b2ff3be85147fcfa967a0716b58ba18948e882b7f7ef91e38bc529cb6db320"
+      sha256 "22934c4cc734822af585b3b5994d325fadbbb8767605774ae08ccf51d12a3670"
     else
       url "https://github.com/cin/k8s-parallel-exec/releases/download/#{version}/k8s-parallel-exec-linux-amd64.tgz"
-      sha256 "0dca01695376fbf045c3fccf05d549fc7f3b494d843b18682918ac7422ce9cd5"
+      sha256 "d8c24e81ec9620ff9bfa7c21087a4b9f0803eb3191d8eb69affebb5169a9faad"
     end
   end
 
