@@ -6,20 +6,20 @@ class K8sParallelExec < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/cin/k8s-parallel-exec/releases/download/#{version}/k8s-parallel-exec-darwin-arm64"
+      url "https://github.com/cin/k8s-parallel-exec/releases/download/#{version}/k8s-parallel-exec-darwin-arm64.tgz"
       sha256 "10f810e82f1bd925fe184f1931a839488714ec5aba06285cc09c3cb789fb825e"
     else
-      url "https://github.com/cin/k8s-parallel-exec/releases/download/#{version}/k8s-parallel-exec-darwin-amd64"
+      url "https://github.com/cin/k8s-parallel-exec/releases/download/#{version}/k8s-parallel-exec-darwin-amd64.tgz"
       sha256 "b421fcefe27d945042bc5d97aa74f53cdb69a19fad532f09f44e334d3966daa2"
     end
   end
   
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/cin/k8s-parallel-exec/releases/download/#{version}/k8s-parallel-exec-linux-arm64"
+      url "https://github.com/cin/k8s-parallel-exec/releases/download/#{version}/k8s-parallel-exec-linux-arm64.tgz"
       sha256 "6d44d919dfa2dfdaef73b14669074e8bd579f68bc6ffe800be3abec89e3fb72c"
     else
-      url "https://github.com/cin/k8s-parallel-exec/releases/download/#{version}/k8s-parallel-exec-linux-amd64"
+      url "https://github.com/cin/k8s-parallel-exec/releases/download/#{version}/k8s-parallel-exec-linux-amd64.tgz"
       sha256 "d9e88f5d06e1b6c2d82d5c3e84940559a5ae068fbe07c92afd7c51ea668d48d5"
     end
   end
