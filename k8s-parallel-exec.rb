@@ -4,7 +4,7 @@ class K8sParallelExec < Formula
   version "0.0.8"
   license "mit"
 
-  on_macos do
+  if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/cin/k8s-parallel-exec/releases/download/#{version}/k8s-parallel-exec-darwin-arm64.tgz"
       sha256 "10f810e82f1bd925fe184f1931a839488714ec5aba06285cc09c3cb789fb825e"
@@ -12,9 +12,7 @@ class K8sParallelExec < Formula
       url "https://github.com/cin/k8s-parallel-exec/releases/download/#{version}/k8s-parallel-exec-darwin-amd64.tgz"
       sha256 "b421fcefe27d945042bc5d97aa74f53cdb69a19fad532f09f44e334d3966daa2"
     end
-  end
-  
-  on_linux do
+  elsif OS.linux?
     if Hardware::CPU.arm?
       url "https://github.com/cin/k8s-parallel-exec/releases/download/#{version}/k8s-parallel-exec-linux-arm64.tgz"
       sha256 "6d44d919dfa2dfdaef73b14669074e8bd579f68bc6ffe800be3abec89e3fb72c"
