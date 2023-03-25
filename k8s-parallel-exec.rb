@@ -25,6 +25,7 @@ class K8sParallelExec < Formula
   end
 
   def install
+    chmod 0755, "k8s-parallel-exec"
     bin.install "k8s-parallel-exec"
   end
 
