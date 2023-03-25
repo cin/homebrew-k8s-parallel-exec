@@ -1,4 +1,4 @@
-class K8sParallelExec < Formula
+class KubectlParallelExec < Formula
   desc "Execute commands on Kubernetes pods in parallel"
   homepage "https://github.com/cin/kubectl-parallel-exec"
   version "0.0.11"
