@@ -1,24 +1,24 @@
 class KubectlParallelExec < Formula
   desc "Execute commands on Kubernetes pods in parallel"
   homepage "https://github.com/cin/kubectl-parallel-exec"
-  version "0.0.12"
+  version "0.0.13"
   license "mit"
 
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/cin/kubectl-parallel-exec/releases/download/#{version}/kubectl-parallel-exec-darwin-arm64.tgz"
-      sha256 "d152c34f474010147ae2fba632fe9d60379a5c5deaff2df1bbfa83b8a5bf1aee"
+      sha256 "7a5a2c47b5e234ed4d9f78dc7a4b6458d0691e5b3f116ff471cdfbccb2a3ded0"
     else
       url "https://github.com/cin/kubectl-parallel-exec/releases/download/#{version}/kubectl-parallel-exec-darwin-amd64.tgz"
-      sha256 "c93ecc01340de940fd69f9abfecad4197da1dfedb76d52b12837f2cbcbfc3b43"
+      sha256 "94791742e54ab6ed5d220547306971849843d65829002a65ce24329ee14fa55f"
     end
   elsif OS.linux?
     if Hardware::CPU.arm?
       url "https://github.com/cin/kubectl-parallel-exec/releases/download/#{version}/kubectl-parallel-exec-linux-arm64.tgz"
-      sha256 "ffc10f967c62887557485554b9fba4fbf5e088a2c2bf8c6342a47f5cd6ec0b17"
+      sha256 "2b317ac6c69fbf8ed6a1468e099e9ace014895d34f68e15b48270bf48a880f13"
     else
       url "https://github.com/cin/kubectl-parallel-exec/releases/download/#{version}/kubectl-parallel-exec-linux-amd64.tgz"
-      sha256 "88ee074adc8cf252a15afe6f268e545ca7725c58f2d4afbb2316f81911444d55"
+      sha256 "8350c1bec77aeda9979398c39c8aa1e89eb1022fefeadb3d28362e5f87276d89"
     end
   end
 
